@@ -1,5 +1,42 @@
 @mixin flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+// @mixin flex-center {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// @mixin section-padding {
+//   padding: $section-padding;
+// }
+
+// @mixin heading-style($size, $weight: $font-weight-bold, $color: $text-color) {
+//   font-size: $size;
+//   font-weight: $weight;
+//   color: $color;
+// }
+
+// @mixin button-style($bg-color, $text-color: $white) {
+//   background-color: $bg-color;
+//   color: $text-color;
+//   border: none;
+//   padding: 10px 20px;
+//   border-radius: $border-radius;
+//   font-weight: $font-weight-semibold;
+//   cursor: pointer;
+//   transition: all 0.3s ease;
+
+//   &:hover {
+//     opacity: 0.9;
+//   }
+// }
+
+// @mixin container-center($max-width: 1200px) {
+//   width: 100%;
+//   max-width: $max-width;
+//   margin: 0 auto;
+// }
