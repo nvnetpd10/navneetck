@@ -127,4 +127,4 @@ function flattenArray(arr) {
 
 const nested = [1, [2, [3, 4], 5], [6, 7]];
 const resultts = flattenArray(nested);
-console.log(resultts); // [1, 2, 3, 4, 5, 6, 7]
+console.log(resultts);

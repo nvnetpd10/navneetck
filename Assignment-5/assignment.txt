@@ -1,0 +1,114 @@
+1 --> top
+sudo kill <PID>
+
+
+2 --> sudo adduser devops
+sudo usermod -aG sudo devops
+su - devops
+
+
+4 --> ps aux
+ps aux | grep java
+
+6 --> grep "error" /var/log/syslog
+grep "error" /var/log/syslog > errors_found.txt
+
+7 --> find /etc -name "*.conf"
+find /etc -name "*.conf" | sort
+find /etc -name "*.conf" | sort > conf_list.txt
+
+
+8 --> awk -F: '{print $7}' /etc/passwd
+awk -F: '{print $7}' /etc/passwd | sort | uniq
+awk -F: '{print $7}' /etc/passwd | sort | uniq | wc -l
+
+
+9 --> vim myfile.txt
+i
+This is my first line
+<Esc>
+:w
+:q
+:wq
+
+u
+ctrl + r
+
+
+10 --> whoamisudo 
+sudo passwd $(whoami)
+sudo shutdown -r now
+
+
+11 --> tar -czvf home_backup.tar.gz -C ~ .
+scp home_backup.tar.gz username@remote_ip:/home/username/
+cd /home/username/
+tar -xzvf home_backup.tar.gz -C /home/username/
+
+
+3 --> sudo apt update
+sudo apt install openssh-server
+sudo systemctl start ssh
+sudo systemctl enable ssh
+sudo systemctl status ssh
+
+scp demo maaz-ahmad-farooqui@10.1.216.10:/home/maaz-ahmad-farooqui/home/Documents
+
+5 --> navneet-tiwari@CK-navneettiwari:~$ ssh-keygen -t rsa -b 4096
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/navneet-tiwari/.ssh/id_rsa): 
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/navneet-tiwari/.ssh/id_rsa
+Your public key has been saved in /home/navneet-tiwari/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:8ZEYZVtu0rq1GwRXYADPSQjw2pk1VuIG0CtY+LjFXSA navneet-tiwari@CK-navneettiwari
+The key's randomart image is:
++---[RSA 4096]----+
+|   .E++o++*.+..  |
+|  . .o.ooX O .   |
+|   * ..oO X =    |
+|  o =oo* + B     |
+|   o..+ S o o    |
+|  .        + .   |
+|          . o    |
+|             o   |
+|            .    |
++----[SHA256]-----+
+
+navneet-tiwari@CK-navneettiwari:~/Documents$ ssh-copy-id nmaazahmadfarooqui@10.1.210.42
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+maazahmadfarooqui@10.1.210.42's password: 
+
+Number of key(s) added: 1
+
+Now try logging into the machine, with:   "ssh 'maazahmadfarooqui@10.1.210.42'"
+and check to make sure that only the key(s) you wanted were added
+
+navneet-tiwari@CK-navneettiwari:~/Documents$ ssh maazahmadfarooqui@10.1.210.42
+Welcome to Ubuntu 24.04.3 LTS (GNU/Linux 6.14.0-35-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+11 additional security updates can be applied with ESM Apps.
+Learn more about enabling ESM Apps service at https://ubuntu.com/esm
+
+Last login: Wed Nov  5 16:29:41 2025 from 10.1.210.1
+
+
+
+
+12 --> navneet-tiwari@CK-navneettiwari:~/Documents$ scp PPTs.tar.gz maazahmadfarooqui@10.1.210.42:/home/maazahmadfarooqui/Documents
+maazahmadfarooqui@10.1.210.42's password:
+PPTs.tar.gz                                   100%    0     0.0KB/s   00:00 
+
+tar -xvxf PPTs.tar.gz
+
+

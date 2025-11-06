@@ -60,7 +60,7 @@ function calculateAverage(total, count) {
   return (total / count).toFixed(2);
 }
 
-function renderTable() {
+const renderTable = () => {
   var tbody = document.querySelector("#studentTable tbody");
   tbody.innerHTML = "";
 
@@ -92,4 +92,4 @@ function renderTable() {
 
     tbody.appendChild(row);
   }
-}
+};
